@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-6704383bf6c10f9ba7ce.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Text_Editor",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Text_Editor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Text_Editor-Debug-3aa4bfc2552722ff8f63.json",
+					"name" : "Text_Editor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Text_Editor_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Text_Editor_autogen-Debug-dc68ad288ff97d4f1301.json",
+					"name" : "Text_Editor_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Text_Editor_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Text_Editor_autogen_timestamp_deps-Debug-def519561f98daf2bb50.json",
+					"name" : "Text_Editor_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/caleb/Documents/TextEditor/Text_Editor/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/caleb/Documents/C++/TextEditor/Text_Editor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
