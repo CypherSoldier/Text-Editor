@@ -31,9 +31,14 @@ private slots:
 
     void on_actionExit_triggered();
 
+    void on_actionSave_as_triggered();
+
+    void on_actionFind_triggered();
+
 private:
     Ui::MainWindow *ui;
     QShortcut* shortcut_open;
     QShortcut* shortcut_save;
+    QString currentFilePath;
 };
 #endif // MAINWINDOW_H

@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "finddialog.h"
 
 #include <QApplication>
 

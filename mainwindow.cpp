@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QMessageBox>
+#include "finddialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,6 +16,10 @@ MainWindow::MainWindow(QWidget *parent)
     // Connect the shortcut's activated signal to the actionOpen slot
     connect(shortcut_open, &QShortcut::activated, this, &MainWindow::on_actionOpen_triggered);
     connect(shortcut_save, &QShortcut::activated, this, &MainWindow::on_actionSave_triggered);
+
+    //connect(ui->actionFind, &QAction::triggered, this, &MainWindow::on_actionFind_triggered);
+    //connect(ui->searchButton, &QPushButton::clicked, this, &FindDialog::onSearchClicked);
+
 }
 
 MainWindow::~MainWindow()
@@ -38,6 +43,7 @@ void MainWindow::on_actionOpen_triggered()
         QTextStream in(&file);
         ui->textEdit->setText(in.readAll());
         file.close();
+        currentFilePath = fileName;
     } else {
         QMessageBox::warning(this, tr("Error"), tr("Cannot open file: %1").arg(file.errorString()));
     }
@@ -46,22 +52,20 @@ void MainWindow::on_actionOpen_triggered()
 
 void MainWindow::on_actionSave_triggered()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, "Save");
-
-    if (fileName.isEmpty()) {
-        return;
+    if (currentFilePath.isEmpty()) {
+        // If no file is opened/saved before, fallback to "Save As"
+        currentFilePath = QFileDialog::getSaveFileName(this, "Save");
+        if (currentFilePath.isEmpty()) {
+            return;
+        }
     }
 
-    QFile file(fileName);
-
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        return;
+    QFile file(currentFilePath);
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << ui->textEdit->toPlainText();
+        file.close();
     }
-    QTextStream out(&file);
-
-    out << ui->textEdit->toPlainText() << "\n";
-
-    file.close();
 }
 
 void MainWindow::on_actionExit_triggered()
@@ -123,3 +127,27 @@ void MainWindow::on_actionNew_triggered()
     QMessageBox::information(this, "Success", "File created successfully!");
 }
 */
+
+void MainWindow::on_actionSave_as_triggered()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, "Save");
+
+    if (fileName.isEmpty()) {
+        return;
+    }
+
+    QFile file(fileName);
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << ui->textEdit->toPlainText();
+        file.close();
+        currentFilePath = fileName; // ← Update path after saving as
+    }
+}
+
+void MainWindow::on_actionFind_triggered()
+{
+    findDialog dialog(ui->textEdit, this);
+    dialog.exec();
+}
+
