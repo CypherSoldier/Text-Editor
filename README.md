@@ -3,15 +3,18 @@
 This is a simple text editor application built using the Qt framework in C++. It allows users to open, edit, and save text files with keyboard shortcuts for quick access to common actions. The application provides basic functionality for loading and saving text files.
 
 ## Features
-- **Open File (Ctrl+O):** Opens a file dialog for selecting a `.txt` file to load its content into the text editor.
+- **New File (Ctrl+N):** Opens a file dialog for creating a new `.txt` file.
+- **Open File (Ctrl+O):** Opens a file dialog for selecting a `.txt` file to load its content into the text editor for editing or reading.
 - **Save File (Ctrl+S):** Opens a file dialog to save the current text in the editor to a file.
+- **Find (Ctrl+F):** Enter a word or phrase to search and all matches will be highlighted.
 - **Exit:** Closes the application through the menu option or using the window's close button.
 
 ## Files and Structure
 ### Code Structure
 - `mainwindow.h`: Header file for the `MainWindow` class.
 - `mainwindow.cpp`: Implementation file for the main window, handling UI and functionality for opening, saving, and exiting.
-- `ui_mainwindow.h`: Auto-generated UI file defining the visual layout (Qt Designer format)
+- `finddialog.h`: Header file for the `FindDialog` class.
+- `finddialog.cpp`: Implementation file for the 'FIND' functionality, handling UI and highlighting.
 
 ### Dependencies
 - Qt framework (e.g., Qt 5 or Qt 6) with widgets support.
