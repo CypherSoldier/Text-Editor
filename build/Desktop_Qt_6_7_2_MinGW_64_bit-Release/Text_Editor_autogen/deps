@@ -1038,6 +1038,8 @@ Text_Editor_autogen/timestamp: \
 	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/main.cpp \
 	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/mainwindow.cpp \
 	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/mainwindow.h \
+	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/replacedialog.cpp \
+	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/replacedialog.h \
 	C:/Users/caleb/Documents/TextEditor/Text_Editor/build/Desktop_Qt_6_7_2_MinGW_64_bit-Release/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/caleb/Documents/TextEditor/Text_Editor/build/Desktop_Qt_6_7_2_MinGW_64_bit-Release/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/caleb/Documents/TextEditor/Text_Editor/build/Desktop_Qt_6_7_2_MinGW_64_bit-Release/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
@@ -1045,4 +1047,5 @@ Text_Editor_autogen/timestamp: \
 	C:/Users/caleb/Documents/TextEditor/Text_Editor/build/Desktop_Qt_6_7_2_MinGW_64_bit-Release/Text_Editor_autogen/moc_predefs.h \
 	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/finddialog.ui \
 	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/mainwindow.ui \
+	C:/Users/caleb/Documents/C++/TextEditor/Text_Editor/replacedialog.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

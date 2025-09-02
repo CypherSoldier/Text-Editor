@@ -29,7 +29,7 @@ public:
     {
         if (findDialog->objectName().isEmpty())
             findDialog->setObjectName("findDialog");
-        findDialog->resize(311, 130);
+        findDialog->resize(311, 164);
         label = new QLabel(findDialog);
         label->setObjectName("label");
         label->setGeometry(QRect(30, 20, 91, 21));
